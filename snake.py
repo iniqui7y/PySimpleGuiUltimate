@@ -66,10 +66,10 @@ while True:
 		if not 0 <= snake_body[0][0] <= CELL_NUM - 1 or \
 		   not 0 <= snake_body[0][1] <= CELL_NUM - 1 or \
 		   snake_body[0] in snake_body[1:]:
-		   break
+			break
 
 		field.DrawRectangle((0,0),(FIELD_SIZE,FIELD_SIZE), 'black')
-
+		
 		tl, br = convert_pos_to_pixel(apple_pos)
 		field.DrawRectangle(tl,br,'red')
 		# draw snake
