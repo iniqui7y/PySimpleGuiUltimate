@@ -28,9 +28,6 @@ while True:
 	if event == sg.WIN_CLOSED:
 		break
 
-	if event == 'Exit':
-		break
-
 	if event == 'Open':
 		file_path = sg.popup_get_file('open',no_window = True)
 		if file_path:
@@ -43,6 +40,9 @@ while True:
 		file = Path(file_path)
 		file.write_text(values['-TEXTBOX-'])
 		window['-DOCNAME-'].update(file_path.split('/')[-1])
+
+	if event == 'Exit':
+		break
 
 	if event == 'Word Count':
 		full_text = values['-TEXTBOX-']
