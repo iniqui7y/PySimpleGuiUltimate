@@ -28,6 +28,9 @@ while True:
 	if event == sg.WIN_CLOSED:
 		break
 
+	if event == 'Exit':
+		break
+
 	if event == 'Open':
 		file_path = sg.popup_get_file('open',no_window = True)
 		if file_path:
